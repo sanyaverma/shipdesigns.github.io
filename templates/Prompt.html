@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>sanya verma</title>
+    <meta name="description" content="How Might We statement generator">
+    <meta name="keywords" content="How might we, prompt, design, generator, statement, design thinking">
+    <meta name="author" content="Sanya Verma">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta http-equiv="refresh" content="30">
+    <link rel="stylesheet" href="static/css/styles.css">
+    
+    
+</head>
+
+<body>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    
+    <div class= "topheader"> 
+        <h2>Ship Designs</h2>
+        <div id="promptbutton">
+            <button class="button active" id=serious>Real Life Prompts</button>
+            <button class="button" id=fun>Fun Prompts</button>
+          </div>
+          
+          <script>
+          // Add active class to the current button (pushed in)
+          var header = document.getElementById("promptbutton");
+          var btns = header.getElementsByClassName("button");
+          for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function() {
+            var current = document.getElementsByClassName("active");
+            current[0].className = current[0].className.replace(" active", "");
+            this.className += " active";
+            });
+          }
+          </script>
+    </div>
+
+    <h1 id="hmw">How might we</h1>
+    <h1 id="prompt">redesign the contraceptive buying experience for teenage girls to make it less stigmatizing?</h1>
+    
+    <div class="refresh">
+        <button id="button3" >refresh</button>
+    </div>
+    <script>
+        // Click to run the funtion
+        $("#button3").click(function() {
+             // Array containing colors 
+            var colors=["#FF7A7A", "#FF663F", "#FF9A3F", "#FFC23F", "#FFDF3F", "#F1FF3F", "#C0FF3F", "#97FF3F", "#58FF3F", "#3FFF72", "#3FFFB2", "#3FFFD9", "#3FE2FF", "#3FCCFF", "#3F8BFF", "#783FFF", "#A73FFF", "#D73FFF", "#FF3FE8", "#FF3F83", "#FF3F3F"];
+             // selecting random color 
+             var random_color = colors[Math.floor( 
+                    Math.random() * colors.length)]; 
+                    var x = document.getElementById('prompt'); 
+                    x.style.color = random_color; 
+            // Display serious prompt python script 
+            $.get('http://127.0.0.1:5000/serious',  // url
+                function (data, textStatus, jqXHR) {  // success call back
+        //             alert('status: ' + textStatus + ', data:' + data);
+                    $("#prompt").html(data);
+                });
+        });
+    </script>
+
+<!-- //If statement- if button 1 is active, show serious prompts -->
+<div> 
+    <script type="text/javascript" >
+       var btn = document.getElementsByClassName("button active");
+            if(btn.id !=="serious"){
+               btn.onclick = function(){ setClicked(data); } 
+            }
+            else {
+                alert("please click at least one button");
+            }
+    </script>
+</div>
+
+    
+</body> 
+</html>
+
