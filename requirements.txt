@@ -1,5 +1,5 @@
 # Dependencies for generating/publishing Python binaries.
 Python-3.7.9
-Flask 1.1.1
+Flask==0.8
 Werkzeug 0.15.4
-gunicorn (version 20.0.4)
+gunicorn==0.14.2
