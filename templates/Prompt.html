@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     
     <div class= "topheader"> 
         <h2>Ship Designs</h2>
@@ -54,7 +54,7 @@
                     var x = document.getElementById('prompt'); 
                     x.style.color = random_color; 
             // Display serious prompt python script 
-            $.get('http://127.0.0.1:5000/serious',  // url
+            $.get('https://ship-designs.herokuapp.com/serious',  // url
                 function (data, textStatus, jqXHR) {  // success call back
         //             alert('status: ' + textStatus + ', data:' + data);
                     $("#prompt").html(data);
