@@ -1,6 +1,5 @@
 from flask import Flask, render_template 
 import random
-import termcolor
 
 
 app = Flask(__name__)
