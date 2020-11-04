@@ -129,6 +129,7 @@ h2 {
   transform: translateY(4px);
   }
 
+
 .refresh {
   color: #FAFAFA;
   text-align: right;
@@ -136,6 +137,7 @@ h2 {
   font-weight: medium;
   font-size: 24px;
   float: right;
+  padding: 40px 25px;
         
   }
   
@@ -167,5 +169,5 @@ h2 {
   box-shadow: inset 5px 5px 5px #0b0b0b, 
               inset -5px -5px 5px #2b2b2b;
   transform: translateY(4px);
+  padding: 40px 25px;
 }
-
