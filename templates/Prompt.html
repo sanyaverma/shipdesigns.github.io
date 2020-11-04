@@ -57,7 +57,7 @@
                     var x = document.getElementById('prompt'); 
                     x.style.color = random_color; 
             // Display serious prompt python script 
-            $.get('http://127.0.0.1:5000/serious',  // url
+            $.get('https://ship-designs.herokuapp.com/serious',  // url
                 function (data, textStatus, jqXHR) {  // success call back
         //             alert('status: ' + textStatus + ', data:' + data);
                     $("#prompt").html(data);
