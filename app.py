@@ -1,4 +1,5 @@
 from flask import Flask, render_template 
+from termcolor import colored
 import random
 
 
@@ -7,8 +8,6 @@ app = Flask(__name__)
 @app.route("/")
 def Prompt():
     return render_template('Prompt.html')
-
-
 
 @app.route("/serious", methods=["GET"])
 def seriousprompt():
@@ -29,6 +28,23 @@ def seriousprompt():
     randomseriousprompt = random.choice(seriousprompt)
     serious_hmw_prompt = randomseriousprompt
     return(serious_hmw_prompt)
+
+@app.route("/fun", methods=["GET"])
+def funprompt():
+    actions = ["design ", "build ", "create ", "invent ", "make ", "modernize "]
+    objects = ["a bed", "a printer", "shoes", "music player", "an ecosystem", "a new planet", "a coffee shop", "a tea flavor", "a bottle of wine", "a brand", "a marketing flyer", "keychain", "bag", "bicycle", "pillows", "watercolors", "stickers"]
+    subjects = ["dragons", "a tent", "humans", "the elderly", "our society", "babies", "grandmothers", "a hotel in Spain", "plants", "your neighbor", "a play", "theatres around the world"]
+    impact = ["solve world hunger", "turn dirt into clean water", "destroy earth", "start a tornado", "bring happiness", "fuck shit up", "you fuck it ship it"]
+    fortext = [" for "] 
+    to = [" to "]
+    randomactions = random.choice(actions)
+    randomobjects = random.choice(objects)
+    randomsubjects = random.choice(subjects)
+    randomimpact = random.choice(impact)
+    randomfor = random.choice(fortext)
+    randomto = random.choice(to)
+    fun_hmw_prompt = randomactions + randomobjects + randomfor + randomsubjects + randomto + randomimpact + "?"
+    return(fun_hmw_prompt)
 
 if __name__ == "__main__":
     app.run(debug=True)

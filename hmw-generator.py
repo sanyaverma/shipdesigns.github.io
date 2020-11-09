@@ -5,15 +5,15 @@ import random
 actions = ["design ", "build ", "create ", "invent ", "make "]
 objects = ["a bed", "an ice cream cone", "shoes", "music player", "an ecosystem", "a new planet", "a coffee shop", "a new tea flavor", "a bottle of wine", "the Shift house"]
 subjects = ["dragons", "a tent", "humans", "Ria Bazaz", "our society", "babies", "my grandmother"]
-impact = ["solve world hunger", "turn dirt into clean water", 
-"destroy earth", "cause a tornado", "bring you happiness", "make your dog wine", "to reduce the mess it makes", "help Ria get drunk", "fuck it ship it"]
+impact = ["we solve world hunger", "we can turn dirt into clean water", 
+"earth gets destroyed", "tornado occurs", "happiness is brought", "a dog cries", "you fuck it ship it"]
 
 randomactions = random.choice(actions)
 randomobjects = random.choice(objects)
 randomsubjects = random.choice(subjects)
 randomimpact = random.choice(impact)
 
-fun_hmw_prompt = "How might we " + randomactions + randomobjects + " for " + randomsubjects + " to " + randomimpact + "?"
+fun_hmw_prompt = "How might we " + randomactions + randomobjects + " for " + randomsubjects + " so that " + randomimpact + "?"
 
 print(fun_hmw_prompt)
 
