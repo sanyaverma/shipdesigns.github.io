@@ -77,13 +77,13 @@
             // Display fun prompt python script 
             var btn = document.getElementsByClassName("button active");
             if (btn.serious !== undefined) {
-                $.get('http://127.0.0.1:5000/serious',  // url
+                $.get('https://ship-designs.herokuapp.com//serious',  // url
                     function (data, textStatus, jqXHR) {  // success call back
             //             alert('status: ' + textStatus + ', data:' + data);
                         $("#prompt").html(data);
                     });
             } else {
-                $.get('http://127.0.0.1:5000/fun',  // url
+                $.get('https://ship-designs.herokuapp.com//fun',  // url
                     function (data, textStatus, jqXHR) {  // success call back
             //             alert('status: ' + textStatus + ', data:' + data);
                         $("#prompt").html(data);
